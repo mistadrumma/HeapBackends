@@ -9,3 +9,5 @@ class Menu(models.Model):
     link = models.CharField(max_length=30, default='#!')
     css_class = models.CharField(max_length=30, default='menu-item')
 
+    def __str__(self):
+        return self.name
