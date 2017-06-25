@@ -9,7 +9,7 @@ class Articles(AbstractDateTimeMode):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True ,on_delete=models.SET_NULL )
-    pretext = models.CharField(max_length=170)
+    pretext = models.TextField(max_length=170)
     bodytext = models.TextField(verbose_name=("Текст статьи"))
     category = models.ForeignKey('Category')
 
