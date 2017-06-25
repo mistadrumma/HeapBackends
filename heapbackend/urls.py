@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.admin import site
-from django.template.context_processors import static
+from django.conf.urls.static import static
 
 from rest_framework import routers
 from base import views
@@ -30,5 +30,5 @@ urlpatterns = [
     url(r'^api/', include('api.urls')),
     url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^grappelli/', include('grappelli.urls')),
-]
+]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
