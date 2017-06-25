@@ -28,7 +28,10 @@ from heapbackend import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('api.urls')),
-    url(r'^admin/filebrowser/', include(site.urls)),
-    url(r'^grappelli/', include('grappelli.urls')),
+                  url(r'^grappelli/', include('grappelli.urls')),
+                  url(r'^admin/', include([
+                      url(r'^', include(admin.site.urls)),
+                      url(r'^filebrowser/', include(site.urls)),
+                  ])),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -20,7 +20,7 @@ class Articles(AbstractDateTimeMode):
                                 verbose_name=("Комментарии"))
     views = models.IntegerField(blank=True, default=0,
                                 verbose_name=("Просмотры"))
-    imgUrl = models.ImageField(upload_to='STATIC_URL')
+    imgUrl = models.ImageField(upload_to='img')
 
 
     @property
