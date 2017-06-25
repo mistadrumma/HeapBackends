@@ -9,7 +9,7 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Articles
-        fields = ('title', 'slug', 'user', 'pretext','bodytext','category','likes','comments','imgUrl')
+        fields = ('id','title', 'slug', 'user', 'pretext','bodytext','category','created','likes','comments','views','imgUrl')
 
     user = serializers.SlugRelatedField(slug_field='username', read_only=True)
 
