@@ -9,7 +9,7 @@ django-extensions==1.7.7
 django-filebrowser==3.7.2
 django-filter==1.0.4
 django-grappelli==2.8.3
-django-tinymce==2.6.0
+
 django-tinymce-4==0.0.18
 djangorestframework==3.6.3
 gunicorn==19.7.1
