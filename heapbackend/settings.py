@@ -47,9 +47,9 @@ INSTALLED_APPS = [
     'base',
     'articles',
     'corsheaders',
-    # 'tinymce_4',
-    # 'grappelli',
-    # 'filebrowser',
+    'tinymce_4',
+    'grappelli',
+    'filebrowser',
 
 
 ]
