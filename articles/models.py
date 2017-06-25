@@ -27,11 +27,15 @@ class Articles(AbstractDateTimeMode):
     def username(self):
         return self.user.username
 
-
+    @property
+    def categoryname(self):
+        return self.category.title
 
 class Category(AbstractDateTimeMode):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
+
+
 
 
     def __str__(self):
