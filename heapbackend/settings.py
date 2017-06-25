@@ -146,8 +146,8 @@ DATABASES['default'].update(db_from_env)
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
-CORS_ORIGIN_ALLOW_ALL = False
-
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
 
     'http://localhost:4200',
