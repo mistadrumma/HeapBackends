@@ -21,4 +21,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Articles, ArticleAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
