@@ -1,8 +1,10 @@
 from django.contrib import admin
 
+
 # Register your models here.
 
 from .models import Articles, Category
+
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -22,5 +24,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 
+
+
+
 admin.site.register(Articles, ArticleAdmin)
 admin.site.register(Category, CategoryAdmin)
+

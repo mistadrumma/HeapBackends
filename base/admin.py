@@ -16,3 +16,5 @@ class BaseAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Menu, BaseAdmin)
+
+
