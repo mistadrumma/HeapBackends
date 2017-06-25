@@ -22,6 +22,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "*xrzsh-a*0oi0tl&_xdmb0$+rtp13xo5=sykeszaxrx*50g)qq"
+AUTH_USER_MODEL = 'auth.User'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'base',
+    'articles',
     'corsheaders',
 ]
 
@@ -143,6 +145,9 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [

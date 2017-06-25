@@ -14,4 +14,5 @@ class BaseAdmin(admin.ModelAdmin):
     list_display = ('name', 'link', 'css_class')
 
 
+
 admin.site.register(Menu, BaseAdmin)

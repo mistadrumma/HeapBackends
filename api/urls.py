@@ -18,14 +18,17 @@ from django.contrib import admin
 from django.template.context_processors import static
 
 from rest_framework import routers
-from base import views
+from api import views
 
 from heapbackend import settings
 
+router = routers.DefaultRouter()
+router.register(r'menu', views.MenuViewSet)
+router.register(r'articles', views.ArticleViewSet)
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^api/', include('api.urls'))
+    url(r'^', include(router.urls)),
+    url(r'^', include('rest_framework.urls', namespace='rest_framework'))
 ]
 

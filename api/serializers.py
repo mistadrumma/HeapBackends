@@ -1,0 +1,19 @@
+from rest_framework import serializers
+from articles.models import Articles
+from base.models import Menu
+
+
+class ArticleSerializer(serializers.ModelSerializer):
+
+
+
+    class Meta:
+        model = Articles
+        fields = ('title', 'slug', 'user', 'pretext','bodytext','category','likes','comments','imgUrl')
+
+    user = serializers.SlugRelatedField(slug_field='username', read_only=True)
+
+class MenuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Menu
+        fields = ('name', 'link', 'css_class')
