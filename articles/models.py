@@ -11,7 +11,7 @@ class Articles(AbstractDateTimeMode):
     slug = models.SlugField()
     user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True ,on_delete=models.SET_NULL )
     pretext = models.TextField(max_length=170)
-    bodytext = TinyMCEModelField('TinyMCEModelField',blank=True, null=True)
+    bodytext = TinyMCEModelField('Текст',blank=True, null=True)
     category = models.ForeignKey('Category')
 
     likes = models.IntegerField(blank=True, default=0,
