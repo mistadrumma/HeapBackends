@@ -26,7 +26,7 @@ from heapbackend import settings
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+
     url(r'^api/', include('api.urls')),
                   url(r'^grappelli/', include('grappelli.urls')),
                   url(r'^admin/', include([
